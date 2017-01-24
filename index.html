@@ -12,8 +12,34 @@
     <div ng-app="myApp" ng-controller="myCtrl">
         {{ firstName + " " + lastName }}
     </div>
-    <div id="App1" ng-app="shoppingCart" ng-controller="ShoppingCartController">
+
+    <script src="js/myApp.js"></script>
+    <script src="js/myCtrl.js"></script>
+  </body>
+</html>
+<!--
+	1. Install GIT
+	2. Install node.js
+	3. Install browser-sync
+	4. Install atom.
+	5. Create new repository in gIt
+	6.  create readme file for that repository.
+	7. Go to setting of the repository and make it  as GitHub Pages (select source as master branch)
+	8. Copy link to clone the repository.
+	9. Pate command on CMD in the directory created for the project C:\Users\hrathore\coursera-projects> git clone https://github.com/1hemant/coursera-test.git
+	10. Cd to new dir created by cloning of the git and start atom >atom .
+	11. Make index.html
+	12. Start broser-sync  >browser-sync start --server --directory --files "**/*"
+	13. Check git status >git status
+	14. Add files to git >git add .
+	15. Check the status >git status
+	16. Commit the changes >git commit -m "First web file."
+	17. Push the changes >git push
+
+
+<div id="App1" ng-app="shoppingCart" ng-controller="ShoppingCartController">
       <h1>Your order</h1>
+        
       <div ng-repeat="item in items">
         <span>{{item.product_name}}</span>
         <span>{{item.price | currency}}</span>
@@ -27,8 +53,9 @@
         <p>{{_name.username}}</p>
       </div>
     </div>
-    <script src="js/myApp.js"></script>
-    <script src="js/myCtrl.js"></script>
+      
+
+      
       <script>
           var shoppingCartModule = angular.module("shoppingCart", [])
             shoppingCartModule.controller("ShoppingCartController",
@@ -60,24 +87,4 @@
             );
             angular.bootstrap(document.getElementById("App2"), ['namesList']);
       </script>
-  </body>
-</html>
-<!--
-	1. Install GIT
-	2. Install node.js
-	3. Install browser-sync
-	4. Install atom.
-	5. Create new repository in gIt
-	6.  create readme file for that repository.
-	7. Go to setting of the repository and make it  as GitHub Pages (select source as master branch)
-	8. Copy link to clone the repository.
-	9. Pate command on CMD in the directory created for the project C:\Users\hrathore\coursera-projects> git clone https://github.com/1hemant/coursera-test.git
-	10. Cd to new dir created by cloning of the git and start atom >atom .
-	11. Make index.html
-	12. Start broser-sync  >browser-sync start --server --directory --files "**/*"
-	13. Check git status >git status
-	14. Add files to git >git add .
-	15. Check the status >git status
-	16. Commit the changes >git commit -m "First web file."
-	17. Push the changes >git push
 -->
