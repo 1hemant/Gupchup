@@ -1,5 +1,12 @@
 <doctype html>
 <html lang="en-US">
+    <!--
+    AngularJS modules define AngularJS applications.
+
+    AngularJS controllers control AngularJS applications.
+
+    The ng-app directive defines the application, the ng-controller directive defines the controller.
+    -->
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Free Web tutorials">
@@ -9,9 +16,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   </head>
   <body>
-    <div ng-app="">
-      <p>Name : <input type="text" ng-model="name"></p>
-      <h1>Hello {{name}}</h1>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        <br>
+        Full Name:{{firstName + " " + lastName}}
     </div>
   </body>
 </html>
+<!--
+	1. Install GIT
+	2. Install node.js
+	3. Install browser-sync
+	4. Install atom.
+	5. Create new repository in gIt
+	6.  create readme file for that repository.
+	7. Go to setting of the repository and make it  as GitHub Pages (select source as master branch)
+	8. Copy link to clone the repository.
+	9. Pate command on CMD in the directory created for the project C:\Users\hrathore\coursera-projects> git clone https://github.com/1hemant/coursera-test.git
+	10. Cd to new dir created by cloning of the git and start atom >atom .
+	11. Make index.html
+	12. Start broser-sync  >browser-sync start --server --directory --files "**/*"
+	13. Check git status >git status
+	14. Add files to git >git add .
+	15. Check the status >git status
+	16. Commit the changes >git commit -m "First web file."
+	17. Push the changes >git push
+-->
